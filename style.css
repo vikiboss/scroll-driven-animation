@@ -2,6 +2,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -13,5 +14,34 @@ main {
 @media screen and (max-width: 800px) {
   #container {
     width: 100%;
+  }
+}
+
+#section-1 {
+  height: 60vh;
+}
+
+#section-1 > div > div {
+  width: 200px;
+  height: 200px;
+  background-color: deeppink;
+}
+
+.animation {
+  animation-timeline: view(block 50% 10%);
+
+  animation-name: grow;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-timing-function: linear;
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
   }
 }
