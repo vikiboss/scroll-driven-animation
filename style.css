@@ -1,3 +1,4 @@
+@import url('./variables.css');
 @import url('./animation.css');
 
 body {
@@ -9,6 +10,10 @@ body {
 
 main {
   width: 800px;
+}
+
+menu {
+  height: 48vh;
 }
 
 @media screen and (max-width: 800px) {
@@ -25,23 +30,4 @@ main {
   width: 200px;
   height: 200px;
   background-color: deeppink;
-}
-
-.animation {
-  animation-timeline: view(block 50% 10%);
-
-  animation-name: grow;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timing-function: linear;
-}
-
-@keyframes grow {
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(1);
-  }
 }

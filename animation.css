@@ -1,0 +1,18 @@
+.animation {
+  animation-timeline: view(block var(--animation-start) var(--animation-end));
+
+  animation-name: grow;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-timing-function: linear;
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
